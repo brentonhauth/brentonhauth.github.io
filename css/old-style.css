@@ -1,0 +1,128 @@
+:root {
+    --primary: rgb(11, 83, 177);
+    --secondary: rgb(255, 138, 5);
+    --error-color: rgba(255, 0, 0, 0.15);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+/* Header Objects */
+div.header {
+    background-position: center center;
+    background-size: cover;
+	background-repeat: no-repeat;
+    background-image: url('../img/banner_test.jpg');
+    
+}
+div.subheader {
+    height: 500px;
+    text-align: center;
+} div.subheader img {
+    border-radius: 50%;
+}
+
+span.header {
+    padding: 25px;
+    font-size: 24pt;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    color: steelblue;
+    text-shadow: 0px 4px 1px rgb(30, 30, 30);
+} span.header span {
+    font-size: 32pt;
+}
+
+/* NavBar Objects */
+div.navBar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    font-size: 14pt;
+    background-color: white;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+} div.navBar div {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul.navBar {
+    list-style-type: none;
+    margin: 0; padding: 0;
+    overflow: hidden;
+}
+ul.navBar li {
+    float: right;
+}
+a.navBar {
+    text-decoration: none;
+    font-family: monospace;
+    color: steelblue;
+    font-size: larger;
+    transition: 0.5s;
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    background-color: white;
+} a.navBar:hover {
+    color: var(--secondary);
+    background-color: whitesmoke;
+    transition: 0.5s;
+}
+
+/* Content Objects */
+div.content {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*div[class*="content"]:first-of-type {
+    padding-top: 1000px;
+}*/
+
+hr.hr-style1 {
+    border: 1px dashed grey;
+}
+
+div.contact {
+    text-align: center;
+    float: right;
+}
+input.contact {
+    width: 295px;
+    border: none;
+}
+textarea.contact {
+    font-family: inherit;
+    width: 600px;
+    border: none;
+}
+.button-style1 {
+    border: 1px solid var(--primary);
+    width:100px; height:30px;
+    border-radius: 3px;
+    background-color: inherit;
+} .button-style1:focus, .button-style1:hover {
+    border-color: var(--secondary);
+    background-color: rgb(240, 240, 240);
+}
+input.contact, textarea.contact, .button-style1 {
+    font-size: 12pt;
+    padding: 5px;
+    outline: none;
+    border-bottom: 1px solid var(--primary);
+    border-right: 1px solid var(--primary);
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 3px;
+    transition: 0.5s;
+} input.contact:focus, textarea.contact:focus {
+    border-bottom-color: var(--secondary);
+    border-right-color: var(--secondary);
+    transition: 0.5s;
+}
