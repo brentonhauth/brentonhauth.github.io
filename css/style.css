@@ -1,3 +1,6 @@
+:root {
+    --divider: 3px solid rgba(70, 130, 180, 0.25);
+}
 .crop{width:auto;height:500px;overflow:hidden;}
 .crop img{width:auto;height:auto;margin:-50px 0 0 0;}
 #banner{position:relative;text-align:center;}
@@ -15,19 +18,21 @@ input.contact, textarea.contact {
     border-right: 1px solid steelblue;
     border-bottom-right-radius: 3px;transition: 0.5s;
 }
+div.para {margin-right:45px;padding-top:15px;}
 input.contact[placeholder~="Subject"]{width:600px;}
 textarea.contact{width:600px; height: 175px;}
 input.contact:focus,textarea.contact:focus,button.contact:focus,button.contact:hover{border-color:orange;transition:0.5s;}
 button.contact {transition:0.5s;outline:none;border:1px solid steelblue;border-radius:3px;height:30px;width:75px;background-color:#fff;}
-
-img[alt="bh"]{border-radius: 50%; float: left;}
-div.vl{padding:20px; border-right: 3px solid rgba(70, 130, 180, 0.25); float:left}
+#AboutSec{height:300px;}
+img[alt="bh"]{border-radius:50%; float:left;}
+div.vl{margin-left:45px;width: initial;padding-right:25px;margin-right:35px; border-right: var(--divider); float:left;}
 .center-v {
     position: absolute;
     top: 50%;
 }
 #Banner {
     background-image: url('../img/banner1.jpg');
+    background-attachment: fixed;
     background-size: cover;
     height: 500px;
     overflow-y: hidden;
