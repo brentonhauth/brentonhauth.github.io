@@ -1,5 +1,5 @@
 :root {
-    --divider: 3px solid rgba(70, 130, 180, 0.25);
+    --divider: 3px solid rgba(70,130,180,0.25);
 }
 .crop{width:auto;height:500px;overflow:hidden;}
 .crop img{width:auto;height:auto;margin:-50px 0 0 0;}
@@ -13,18 +13,22 @@ table.contact tr td{padding:5px;font-family:Arial,Helvetica,sans-serif;font-size
 input.contact, textarea.contact {
     height: 30px;
     width: 295px;
-    outline: none; border: none;
+    outline:none; border:none;
     border-bottom: 1px solid steelblue;
     border-right: 1px solid steelblue;
     border-bottom-right-radius: 3px;transition: 0.5s;
 }
+
 div.para {margin-right:45px;padding-top:15px;}
-input.contact[placeholder~="Subject"]{width:600px;}
+input.contact[placeholder="Subject"]{width:600px;}
 textarea.contact{width:600px; height: 175px;}
-input.contact:focus,textarea.contact:focus,button.contact:focus,button.contact:hover{border-color:orange;transition:0.5s;}
+input.contact:focus,
+textarea.contact:focus,
+button.contact:focus,
+button.contact:hover{border-color:orange;transition:0.5s;}
 button.contact {transition:0.5s;outline:none;border:1px solid steelblue;border-radius:3px;height:30px;width:75px;background-color:#fff;}
 #AboutSec{height:300px;}
-img[alt="bh"]{border-radius:50%; float:left;}
+img[alt="bh"]{border-radius:50%;float:left;}
 div.vl{margin-left:45px;width: initial;padding-right:25px;margin-right:35px; border-right: var(--divider); float:left;}
 .center-v {
     position: absolute;
@@ -39,33 +43,29 @@ div.vl{margin-left:45px;width: initial;padding-right:25px;margin-right:35px; bor
     background-position-y: 50%;
 }
 
-#ratingBar {
+input[type="range"] {
     opacity: 0.85;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border: 1px solid lightgrey; 
-    border-radius: 10px;
-    height: 10px;
-    width: 150px;
-    background-color: transparent; 
+    -webkit-appearance:none;-moz-appearance:none;
+    border: none;
+    height: 5px;
+    width: 175px;
     transition: 0.3s opacity;
+    background-color: #fff;
     outline: none;
-} #ratingBar:hover {
+}
+input[type="range"]:hover {
     opacity: 1;
     transition: 0.3s opacity;
-} #ratingBar::-moz-slider-thumb {
-    -moz-appearance: none;
+}
+#R2GTarget1,#R2GTarget2{height:175px;width:175px;border-radius:50%;background-color:rgba(255,255,0,0.5);}
+input[type="range"]::-moz-slider-thumb,
+input[type="range"]::-webkit-slider-thumb{
+    -moz-appearance:none;
+    -webkit-appearance:none;
     outline: none;
     height: 15px;
     width: 15px;
-    border-radius: 15px;
-    background: rgb(51, 39, 39);
+    border-radius: 50%;
+    
 }
-#ratingBar::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    outline: none;
-    height: 15px;
-    width: 15px;
-    border-radius: 15px;
-    background: rgb(58, 58, 58);
-}
+

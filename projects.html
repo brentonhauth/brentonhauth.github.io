@@ -1,3 +1,86 @@
 <div>
-    <p>Section currently under maintenance...</p>
+    <div>
+        <script src="lib/js/color.js"></script>
+        <script>
+            var useV1 = true;
+            /*$("#BTN").click(function() {
+                useV1 = !useV1;
+                if (useV1) {
+                    $(this).text("Use HSL");
+                } else {
+                    $(this).text("Use RGB");
+                }
+            });*/
+            $("#SLDR").on("input", function() {
+                var c1, c2;
+                    c1 = ColorRGB.mix(IC1.value, IC2.value, SLDR.value/100);
+                
+                    c2 = ColorHSL.mix(IC1.value, IC2.value, SLDR.value/100);
+                
+                R2GTarget1.style.backgroundColor =c1;
+                R2GTarget2.style.backgroundColor =c2;
+            });
+        </script>
+    </div>
+
+    <h2 class="h2">Color Mixer</h2>
+    <div>
+        <script src="lib/js/jsrc.min.js"></script>
+        <script>
+            function changeColor(target, slider) {
+                var clr = colorStrengthRatio(slider.value/100,false);
+                var fc = "rgba("+clr[0]+","+clr[1]+","+clr[2]+","+0.5+")";
+                target.style.backgroundColor = fc;
+            }
+        </script>
+        <!--Project 1-->
+        <p>What started as a small adition to a group project, has now turned into
+            a complex system of color calculations. The first version could only produce an output between 2 colors.
+            <table>
+                <tr>
+                    <td><div id="R2GTarget1"></div></td>
+                    <td><div id="R2GTarget2"></div></td>
+                </tr>
+            </table>
+            
+            <input type="color" id="IC1">
+            <input type="range" id="SLDR">
+            <input type="color" id="IC2">
+            <button id="BTN">Use HSL</button>
+        </p>
+        <div class="float-left1">
+            <div id="R2GTarget1"></div>
+            <input type="range" oninput="changeColor(R2GTarget1, this)">
+        </div>
+
+        <hr class="dashed">
+        <div id="morePro1" class="collapse">
+            <!--More Project 1-->
+            More
+        </div>
+    </div>
+    <div class="text-center">
+        <button type="button" class="btn-primary rounded" data-toggle="collapse"
+        style="outline:none" data-target="#morePro1" aria-expanded="false">Read More</button>
+    </div><hr class="border-dark">
+
+    <h2 class="h2">Iminent Exposure</h2>
+    <div>
+        <!--Project 2-->
+        Desc
+        <hr>
+        <div id="morePro2" class="collapse">
+            <!--More Project 2-->
+            More
+        </div>
+    </div>
+    <div class="text-center">
+        <button type="button" class="btn-primary rounded" data-toggle="collapse"
+        style="outline:none" data-target="#morePro2" aria-expanded="false">Read More</button>
+    </div>
+    <script>
+        $("button.btn-primary").click(function() {
+            $(this).text(($(this).text()=="Read More"?"Show Less":"Read More"));
+        });
+    </script>
 </div>

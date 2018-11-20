@@ -3,10 +3,10 @@ function loadPage(p) {
     p = p.toLowerCase();
     $("#Content").load(p+".html");
     var titled = p.charAt(0).toUpperCase() + p.substr(1);
-    $("#main").text(titled);
+    $("#heading").text(titled);
     $("title").text("Brenton Hauth | "+titled);
+    
 }
-
 $(document).ready(function() {
     $(".nav-link").click(function() {
         var lastActive = $(".nav-link.active"), t = $(this).text();
