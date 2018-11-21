@@ -57,9 +57,16 @@ input[type="range"]:hover {
     opacity: 1;
     transition: 0.3s opacity;
 }
-#R2GTarget1,#R2GTarget2{height:175px;width:175px;border-radius:50%;background-color:rgba(255,255,0,0.5);}
-input[type="range"]::-moz-slider-thumb,
-input[type="range"]::-webkit-slider-thumb{
+.colorDisplay{height:175px;width:175px;border-radius:50%;background-color:rgba(255,255,0,0.5);}
+.mixerDisplayLeft,
+.mixerDisplayRight,
+.mixerDisplayCenter{height:175px;width:175px;border-top:1px solid #000;border-bottom: 1px solid #000;}
+.mixerDisplayLeft{border-bottom-left-radius:20%;border-top-left-radius: 20%;border-left:1px solid #000;}
+.mixerDisplayRight{border-bottom-right-radius:20%;border-top-right-radius: 20%;border-right: 1px solid #000;}
+.rgbMixer>code {margin:auto;}
+.bias-num{width:50px;}
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-slider-thumb {
     -moz-appearance:none;
     -webkit-appearance:none;
     outline: none;

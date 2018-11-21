@@ -1,6 +1,9 @@
+<div id="Div">
+</div>
+
 <div>
+    <script>$("#Div").load("color.html");</script>
     <div>
-        <script src="lib/js/color.js"></script>
         <script>
             var useV1 = true;
             /*$("#BTN").click(function() {
@@ -13,10 +16,8 @@
             });*/
             $("#SLDR").on("input", function() {
                 var c1, c2;
-                    c1 = ColorRGB.mix(IC1.value, IC2.value, SLDR.value/100);
-                
-                    c2 = ColorHSL.mix(IC1.value, IC2.value, SLDR.value/100);
-                
+                c1 = ColorRGB.mix(IC1.value, IC2.value, SLDR.value/100);
+                c2 = ColorHSL.mix(IC1.value, IC2.value, SLDR.value/100);
                 R2GTarget1.style.backgroundColor =c1;
                 R2GTarget2.style.backgroundColor =c2;
             });
@@ -25,7 +26,6 @@
 
     <h2 class="h2">Color Mixer</h2>
     <div>
-        <script src="lib/js/jsrc.min.js"></script>
         <script>
             function changeColor(target, slider) {
                 var clr = colorStrengthRatio(slider.value/100,false);
@@ -53,7 +53,7 @@
             <input type="range" oninput="changeColor(R2GTarget1, this)">
         </div>
 
-        <hr class="dashed">
+        <hr class="dashed"/>
         <div id="morePro1" class="collapse">
             <!--More Project 1-->
             More
@@ -62,13 +62,13 @@
     <div class="text-center">
         <button type="button" class="btn-primary rounded" data-toggle="collapse"
         style="outline:none" data-target="#morePro1" aria-expanded="false">Read More</button>
-    </div><hr class="border-dark">
+    </div><hr class="border-dark"/>
 
     <h2 class="h2">Iminent Exposure</h2>
     <div>
         <!--Project 2-->
         Desc
-        <hr>
+        <hr/>
         <div id="morePro2" class="collapse">
             <!--More Project 2-->
             More
