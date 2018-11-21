@@ -1,15 +1,30 @@
 <div>
+    <div>
+        <div class="R2G"></div>
+        <input type="range" class="R2G">
+    </div>
+
+    <hr>
+
     <table id="MixerRGB">
         <tr>
-            <td><div class="rgbMixer mixerDisplayLeft"><code></code></div></td>
-            <td><div class="rgbMixer mixerDisplayCenter"><code></code></div></td>
-            <td><div class="rgbMixer mixerDisplayRight"><code></code></div></td>
+            <td><div class="rgbMixer mixerDisplayLeft text-center">
+                <input type="range" class="rgbMixer color-1" /><br />
+                <input type="range" class="rgbMixer color-1" /><br />
+                <input type="range" class="rgbMixer color-1" />
+            </div></td>
+            <td>
+                <div class="rgbMixer mixerDisplayCenter"><code></code></div>
+                <div class="hslMixer mixerDisplayCenter"><code></code></div>
+            </td>
+            <td><div class="rgbMixer mixerDisplayRight text-center">
+                <input type="range" class="rgbMixer color-1" /><br />
+                <input type="range" class="rgbMixer color-1" /><br />
+                <input type="range" class="rgbMixer color-1" />
+            </div></td>
         </tr>
         <tr class="text-center">
             <td>
-                <input type="range" class="rgbMixer color-1" /><br />
-                <input type="range" class="rgbMixer color-1" /><br />
-                <input type="range" class="rgbMixer color-1" /><br />
                 <input type="color" class="rgbMixer" data-color-id="1" />
             </td>
             <td>
@@ -17,66 +32,12 @@
                 <input type="number" class="bias-num rgbMixer" value="50" />
             </td>
             <td>
-                <input type="range" class="rgbMixer color-1" /><br />
-                <input type="range" class="rgbMixer color-1" /><br />
-                <input type="range" class="rgbMixer color-1" /><br />
                 <input type="color" class="rgbMixer" data-color-id="2" />
             </td>
         </tr>
+        <tr><td><button class="rgbMixer btn-dark">Show HSL</button><input type="hidden" id="UseHSL" value="0"/></td></tr>
     </table>
-    <script>
-        $(document).ready(function() {
-            function checkBrightness(R, G, B) {
-                R /= 255; G /= 255; B /= 255;
-                var x = Math.max(R,G,B) + Math.min(R,G,B);
-                return x / 2;
-            }
-
-            let lst = $("input.rgbMixer.color-1").get();
-
-            var rgbMixColor1 = new LinkedColorElement(
-                lst[0], lst[1], lst[2],
-                $("div.rgbMixer.mixerDisplayLeft").get(0)
-            ); rgbMixColor1.alpha = 0.85;
-
-            var rgbMixColor2 = new LinkedColorElement(
-                lst[3], lst[4], lst[5],
-                $("div.rgbMixer.mixerDisplayRight").get(0)
-            ); rgbMixColor2.alpha = 0.85;
-
-            $("input.rgbMixer").on("input", function() {
-                var mixEl = $("div.rgbMixer.mixerDisplayCenter").get(0);
-                var bias = 0; var c1, c2;
-                if ($(this).attr("type") == "number") {
-                    bias = $(this).val();
-                    bias = bias > 100 ? 100 : bias < 0 ? 0 : bias;
-                    $("input.bias-slider.rgbMixer").val(bias);
-                } else if ($(this).attr("class") == "bias-slider rgbMixer") {
-                    bias = $(this).val();
-                    $("input.bias-num.rgbMixer").val(bias);
-                } else bias = $("input.bias-slider.rgbMixer").val();
-                if ($(this).attr("type") == "color") {
-                    if ($(this).attr("data-color-id") == "1") {
-                        c1 = $(this).val();
-                        c2 = rgbMixColor2.getColor().hex;
-                    } else {
-                        c1 = rgbMixColor1.getColor().hex;
-                        c2 = $(this).val();
-                    }
-                } else {
-                    c1 = rgbMixColor1.getColor();
-                    c2 = rgbMixColor2.getColor();
-                }
-                mix = ColorRGB.mix(c1, c2, bias/100, false);
-                mixEl.style.backgroundColor = mix.formatRGB;
-            });
-            $(".mixerDisplayCenter, .bias-slider").css("width","300px");
-            var c = ColorRGB.mix(rgbMixColor1.getColor(), rgbMixColor2.getColor(), 0.5, false); c.alpha = 0.85;
-            a3 = $(".mixerDisplayCenter");
-            a3.get(0).style.backgroundColor = c.formatRGB;
-        });
-        
-    </script>
+    <script src="js/color-demo.js"></script>
     <div>
     </div>
 </div>

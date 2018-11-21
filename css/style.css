@@ -3,8 +3,8 @@
 }
 .crop{width:auto;height:500px;overflow:hidden;}
 .crop img{width:auto;height:auto;margin:-50px 0 0 0;}
-#banner{position:relative;text-align:center;}
-#banner hr{border-top-width:1px;border-style:solid;border-color:black;}
+#Banner{position:relative;text-align:center;}
+#Banner hr{border-top-width:1px;border-style:solid;border-color:black;}
 .b-title-text{position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);}
 .b-title-text hr{border: 1px solid black;}
 nav a {outline:none}
@@ -17,6 +17,29 @@ input.contact, textarea.contact {
     border-bottom: 1px solid steelblue;
     border-right: 1px solid steelblue;
     border-bottom-right-radius: 3px;transition: 0.5s;
+}
+div.section-header {
+    text-transform: capitalize;
+    background-image: linear-gradient(to right,rgba(55, 56, 131, 0.4), rgba(236, 170, 71, 0.212));
+    background-size: cover;
+    height: 300px;
+
+}
+#heading {
+    background-image: linear-gradient(to top,rgba(9, 10, 77, 0.2),rgba(9, 10, 77, 0.2),
+    rgba(250, 29, 0, 0.2), rgba(240, 149, 13, 0.2), rgba(58, 159, 226, 0.2));
+    background-attachment: fixed;
+    text-transform: capitalize;
+}
+
+#navbarList {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+#navbarList:hover {
+    opacity: 1;
+    transition: 0.5s;
 }
 
 div.para {margin-right:45px;padding-top:15px;}
@@ -38,17 +61,21 @@ div.vl{margin-left:45px;width: initial;padding-right:25px;margin-right:35px; bor
     background-image: url('../img/banner1.jpg');
     background-attachment: fixed;
     background-size: cover;
-    height: 500px;
+    height: 600px;
     overflow-y: hidden;
     background-position-y: 50%;
 }
-
+div.R2G {
+    width: 175px; height: 175px;
+    border-radius: 50%;
+    background-color: rgba(255,255,0,0.67);
+}
 input[type="range"] {
     opacity: 0.85;
     -webkit-appearance:none;-moz-appearance:none;
     border: none;
     height: 5px;
-    width: 175px;
+    width: 150px;
     transition: 0.3s opacity;
     background-color: #fff;
     outline: none;
@@ -58,11 +85,15 @@ input[type="range"]:hover {
     transition: 0.3s opacity;
 }
 .colorDisplay{height:175px;width:175px;border-radius:50%;background-color:rgba(255,255,0,0.5);}
+.mixerDisplayCenter{width: 300px;border-radius: 15%;}
+.mixerDisplayLeft,
+.mixerDisplayRight{width: 200px;border-radius: 15%;}
 .mixerDisplayLeft,
 .mixerDisplayRight,
-.mixerDisplayCenter{height:175px;width:175px;border-top:1px solid #000;border-bottom: 1px solid #000;}
-.mixerDisplayLeft{border-bottom-left-radius:20%;border-top-left-radius: 20%;border-left:1px solid #000;}
-.mixerDisplayRight{border-bottom-right-radius:20%;border-top-right-radius: 20%;border-right: 1px solid #000;}
+.mixerDisplayCenter{height:175px;border-top:2px solid #444;border:1px solid #444;}
+
+.mixerDisplayLeft{border-left:1px solid #444;}
+.mixerDisplayRight{border-right: 1px solid #444;}
 .rgbMixer>code {margin:auto;}
 .bias-num{width:50px;}
 input[type="range"]::-webkit-slider-thumb,
