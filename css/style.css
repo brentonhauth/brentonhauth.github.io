@@ -87,7 +87,7 @@ input[type="range"]:hover {
 .colorDisplay{height:175px;width:175px;border-radius:50%;background-color:rgba(255,255,0,0.5);}
 .mixerDisplayCenter{width: 300px;border-radius: 15%;}
 .mixerDisplayLeft,
-.mixerDisplayRight{width: 200px;border-radius: 15%;}
+.mixerDisplayRight{width: 175px;border-radius: 15%;}
 .mixerDisplayLeft,
 .mixerDisplayRight,
 .mixerDisplayCenter{height:175px;border-top:2px solid #444;border:1px solid #444;}

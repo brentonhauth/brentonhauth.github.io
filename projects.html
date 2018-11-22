@@ -1,71 +1,40 @@
-<div id="Div">
-</div>
-
 <div>
-    <script>$("#Div").load("color.html");</script>
-    <div>
-        <script>
-            var useV1 = true;
-            /*$("#BTN").click(function() {
-                useV1 = !useV1;
-                if (useV1) {
-                    $(this).text("Use HSL");
-                } else {
-                    $(this).text("Use RGB");
-                }
-            });*/
-            $("#SLDR").on("input", function() {
-                var c1, c2;
-                c1 = ColorRGB.mix(IC1.value, IC2.value, SLDR.value/100);
-                c2 = ColorHSL.mix(IC1.value, IC2.value, SLDR.value/100);
-                R2GTarget1.style.backgroundColor =c1;
-                R2GTarget2.style.backgroundColor =c2;
-            });
-        </script>
-    </div>
-
-    <h2 class="h2">Color Mixer</h2>
-    <div>
-        <script>
-            function changeColor(target, slider) {
-                var clr = colorStrengthRatio(slider.value/100,false);
-                var fc = "rgba("+clr[0]+","+clr[1]+","+clr[2]+","+0.5+")";
-                target.style.backgroundColor = fc;
-            }
-        </script>
+    <div class="mx-auto" style="width: 800px;">
+        <h2 class="h1">Color Mixer</h2>
         <!--Project 1-->
-        <p>What started as a small adition to a group project, has now turned into
-            a complex system of color calculations. The first version could only produce an output between 2 colors.
-            <table>
-                <tr>
-                    <td><div id="R2GTarget1"></div></td>
-                    <td><div id="R2GTarget2"></div></td>
-                </tr>
-            </table>
-            
-            <input type="color" id="IC1">
-            <input type="range" id="SLDR">
-            <input type="color" id="IC2">
-            <button id="BTN">Use HSL</button>
-        </p>
-        <div class="float-left1">
-            <div id="R2GTarget1"></div>
-            <input type="range" oninput="changeColor(R2GTarget1, this)">
+        <div class="text-center float-right">
+            <div class="R2G"></div>
+            <input type="range" class="R2G">
         </div>
+        <p>&emsp;&emsp;This project was to demonstrate the different ways in
+            which colors could be mixed. The earliest version was created
+            as a way to rate movies. Users would rate a movie from 1 to 10.
+            Each number corresponded to a color 
+            (0 being <i>red</i>, 10 being <i>green</i>, and 5 in the middle would be <i>yellow</i>.
+        </p>
+        <p>
+            &emsp;Athough it is apealing to see the
+            change in color from one state to the next, the versatility of
+            very limited.<br> The next step was to improve upon this system
+            in order to mix any 2 colors together.
+        </p>
+        
 
         <hr class="dashed"/>
-        <div id="morePro1" class="collapse">
-            <!--More Project 1-->
-            More
-        </div>
+        <div id="morePro1" class="collapse"></div>
     </div>
     <div class="text-center">
         <button type="button" class="btn-primary rounded" data-toggle="collapse"
         style="outline:none" data-target="#morePro1" aria-expanded="false">Read More</button>
     </div><hr class="border-dark"/>
+    <script>
+        $("#morePro1").load("color.html");
+    </script>
+    <script src="js/color-demo.js"></script>
 
-    <h2 class="h2">Iminent Exposure</h2>
-    <div>
+    <br><br><br><br>
+    <div class="mt-5">
+        <h2 class="h2">Iminent Exposure</h2>
         <!--Project 2-->
         Desc
         <hr/>
@@ -78,6 +47,7 @@
         <button type="button" class="btn-primary rounded" data-toggle="collapse"
         style="outline:none" data-target="#morePro2" aria-expanded="false">Read More</button>
     </div>
+    <script>$("#Div").load("color.html");</script>
     <script>
         $("button.btn-primary").click(function() {
             $(this).text(($(this).text()=="Read More"?"Show Less":"Read More"));
