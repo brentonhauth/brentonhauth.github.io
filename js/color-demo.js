@@ -1,4 +1,5 @@
 (function() {
+    "use strick";
 
     $("input.R2G").on("input", function() {
         var clr = jsrc.color.redToGreenRatio($(this).val() / 100, false);
@@ -99,7 +100,6 @@
 
     $("button.rgbMixer").on("click", function() {
         UseHSL = !UseHSL;
-        //$("UseHSL").val(($("UseHSL").val() == "1" ? "0" : "1"));
         if (UseHSL) {
             $(this).text("Hide HSL Mix");
             $(".rgbMixer.mixerDisplayCenter").css({

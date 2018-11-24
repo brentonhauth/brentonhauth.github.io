@@ -1,4 +1,3 @@
-//44622
 function loadPage(p) {
     p = p.toLowerCase();
     $("#Content").load(p+".html");
