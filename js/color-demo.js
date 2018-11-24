@@ -30,6 +30,7 @@
         var bias = 0; var c1, c2;
         if ($(this).attr("type") == "number") {
             bias = $(this).val();
+            if (isNaN(bias)) return;
             bias = bias > 100 ? 100 : bias < 0 ? 0 : bias;
             $("input.bias-slider.rgbMixer").val(bias);
         } else if ($(this).attr("class") == "bias-slider rgbMixer") {
