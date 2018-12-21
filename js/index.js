@@ -4,7 +4,6 @@ function loadPage(p) {
     var titled = p.charAt(0).toUpperCase() + p.substr(1);
     $("#heading").text(titled);
     $("title").text("Brenton Hauth | "+titled);
-    
 }
 $(document).ready(function() {
     $(".nav-link").click(function() {

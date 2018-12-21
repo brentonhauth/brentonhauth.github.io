@@ -1,20 +1,24 @@
 <div>
     <table id="MixerRGB">
         <tr>
-            <td><div class="rgbMixer mixerDisplayLeft text-center"><br/>
-                <input type="range" class="rgbMixer color-1 mt-auto mb-auto" /><br/><br/>
-                <input type="range" class="rgbMixer color-1 mt-auto mb-auto" /><br/><br/>
-                <input type="range" class="rgbMixer color-1 mt-auto mb-auto" />
-            </div></td>
+            <td>
+                <div class="rgbMixer mixerDisplayLeft text-center"><br/>
+                    <input type="range" class="rgbMixer color-1 mt-auto mb-auto" /><br/><br/>
+                    <input type="range" class="rgbMixer color-1 mt-auto mb-auto" /><br/><br/>
+                    <input type="range" class="rgbMixer color-1 mt-auto mb-auto" />
+                </div>
+            </td>
             <td>
                 <div class="rgbMixer mixerDisplayCenter"></div>
                 <div class="hslMixer mixerDisplayCenter"></div>
             </td>
-            <td><div class="rgbMixer mixerDisplayRight text-center"><br/>
-                <input type="range" class="rgbMixer color-1 mt-auto mb-auto" /><br/><br/>
-                <input type="range" class="rgbMixer color-1 mt-auto mb-auto" /><br/><br/>
-                <input type="range" class="rgbMixer color-1 mt-auto mb-auto" />
-            </div></td>
+            <td>
+                <div class="rgbMixer mixerDisplayRight text-center"><br/>
+                    <input type="range" class="rgbMixer color-1 mt-auto mb-auto" /><br/><br/>
+                    <input type="range" class="rgbMixer color-1 mt-auto mb-auto" /><br/><br/>
+                    <input type="range" class="rgbMixer color-1 mt-auto mb-auto" />
+                </div>
+            </td>
         </tr>
         <tr class="text-center">
             <td>
@@ -29,8 +33,8 @@
             </td>
         </tr>
     </table>
-    <!--
-    <p>
+
+    <div>
         <h3>How it Works</h3>
         As you know a color is made up of 3 seperate levels of
         <span style="color:red">red</span>, <span style="color:blue">blue</span>,
@@ -38,9 +42,27 @@
         from the other like so:
         lets say we're using the colors pink (255, 128, 192), and this shade of purple (71, 61, 139)
         <code>
-            <span></span>R<sub>1</sub> - R<sub>2</sub>
+            <span></span>R<sub>new</sub> = 255<sub>R</sub> - 71<sub>R</sub><br />
+            <span></span>G<sub>new</sub> = 128<sub>G</sub> - 61<sub>G</sub><br />
+            <span></span>B<sub>new</sub> = 192<sub>B</sub> - 139<sub>B</sub><br />
+            // This gives us a new 'rgb' value of (x, y, z)
         </code>
-    </p>-->
+        <br />
+        Next you take our new rgb values and multiply them each by a bais between 0.0 and 1.0.<br />
+        (Lets say the bias is 0.5)<br />
+        <code>
+            <span></span>R<sub>new</sub> = x * 0.5
+            <span></span>G<sub>new</sub> = x * 0.5
+            <span></span>B<sub>new</sub> = x * 0.5
+        </code><br />
+        After that you add the new values to the values of the first color.<br />
+        <code>
+            <span></span>R<sub>new</sub>
+            <span></span>G<sub>new</sub>
+            <span></span>B<sub>new</sub>
+        </code><br />
+
+    </div>
     <div class="text-center"><button class="rgbMixer btn-dark">Show HSL</button></div>
     <script src="js/color-demo.js"></script>
 </div>

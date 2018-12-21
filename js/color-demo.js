@@ -1,5 +1,5 @@
 (function() {
-    "use strick";
+    "use strict";
 
     $("input.R2G").on("input", function() {
         var clr = jsrc.color.redToGreenRatio($(this).val() / 100, false);
@@ -31,6 +31,7 @@
         if ($(this).attr("type") == "number") {
             bias = $(this).val();
             if (isNaN(bias)) return;
+            else if (bias > 100 || bias < 0) return;
             bias = bias > 100 ? 100 : bias < 0 ? 0 : bias;
             $("input.bias-slider.rgbMixer").val(bias);
         } else if ($(this).attr("class") == "bias-slider rgbMixer") {
@@ -93,7 +94,6 @@
         "border-top-right-radius": "1%",
         "border-bottom-left-radius": "15%",
         "border-bottom-right-radius": "15%"
-
     });
 
     $("div.hslMixer").hide();
