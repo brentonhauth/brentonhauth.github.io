@@ -21,16 +21,15 @@
         </p>
         
 
-        <hr class="dashed"/>
+        <hr class="dashed" />
         <div id="morePro1" class="collapse"></div>
     </div>
     <div class="text-center">
         <button type="button" class="btn-primary rounded" data-toggle="collapse"
         style="outline:none" data-target="#morePro1" aria-expanded="false">Read More</button>
     </div><hr class="border-dark"/>
-    <script>$("#morePro1").load("color.html");</script>
 
-    <br><br><br><br>
+    <br><br>
     <div class="mt-5">
         <h2 class="h2">Iminent Exposure</h2>
         <!--Project 2-->
@@ -44,8 +43,11 @@
         style="outline:none" data-target="#morePro2" aria-expanded="false">Read More</button>
     </div>
     <script>
-        $("button.btn-primary").click(function() {
-            $(this).text(($(this).text()=="Read More"?"Show Less":"Read More"));
+        $(document).ready(() => {
+            $("#morePro1").load("color.html");
+            $("button.btn-primary").click(function() {
+                $(this).text(/^R/.test($(this).text()) ? "Show Less" : "Read More");
+            });
         });
     </script>
 </div>

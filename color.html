@@ -2,38 +2,44 @@
     <table id="MixerRGB">
         <tr>
             <td>
-                <div class="rgbMixer mixerDisplayLeft text-center"><br/>
-                    <input type="range" class="rgbMixer color-1 mt-auto mb-auto" /><br/><br/>
-                    <input type="range" class="rgbMixer color-1 mt-auto mb-auto" /><br/><br/>
-                    <input type="range" class="rgbMixer color-1 mt-auto mb-auto" />
+                <div class="rgbMixer mixerDisplayLeft text-center">
+                    <h6 class="color-hex-display hex-mixer mt-2 font-weight-bold"></h6>
+                    <input type="range" class="rgbMixer color-1 my-auto" /><br /><br />
+                    <input type="range" class="rgbMixer color-1 my-auto" /><br /><br />
+                    <input type="range" class="rgbMixer color-1 my-auto" />
                 </div>
             </td>
             <td>
-                <div class="rgbMixer mixerDisplayCenter"></div>
-                <div class="hslMixer mixerDisplayCenter"></div>
+                <div class="rgbMixer mixerDisplayCenter text-center"><br />
+                    <h6 class="color-hex-display font-weight-bold"></h6>
+                </div>
+                <div class="hslMixer mixerDisplayCenter text-center"><br />
+                    <h6 class="color-hex-display .hsl-display font-weight-bold"></h6>
+                </div>
             </td>
             <td>
-                <div class="rgbMixer mixerDisplayRight text-center"><br/>
-                    <input type="range" class="rgbMixer color-1 mt-auto mb-auto" /><br/><br/>
-                    <input type="range" class="rgbMixer color-1 mt-auto mb-auto" /><br/><br/>
-                    <input type="range" class="rgbMixer color-1 mt-auto mb-auto" />
+                <div class="rgbMixer mixerDisplayRight text-center">
+                    <h6 class="color-hex-display hex-mixer mt-2 font-weight-bold"></h6>
+                    <input type="range" class="rgbMixer color-1 my-auto" /><br /><br />
+                    <input type="range" class="rgbMixer color-1 my-auto" /><br /><br />
+                    <input type="range" class="rgbMixer color-1 my-auto" />
                 </div>
             </td>
         </tr>
         <tr class="text-center">
             <td>
-                <input type="color" class="rgbMixer" data-color-id="1" />
+                <input type="color" class="rgbMixer color-select-1 form-control" data-color-id="1" />
             </td>
             <td>
                 <input type="range" class="bias-slider rgbMixer" /><br /><br />
                 <input type="number" class="bias-num rgbMixer" value="50" />
             </td>
             <td>
-                <input type="color" class="rgbMixer" data-color-id="2" />
+                <input type="color" class="rgbMixer color-select-2 form-control" data-color-id="2" />
             </td>
         </tr>
     </table>
-
+    <div class="text-center"><button class="rgbMixer btn-dark">Show HSL</button></div>
     <div>
         <h3>How it Works</h3>
         As you know a color is made up of 3 seperate levels of
@@ -63,6 +69,5 @@
         </code><br />
 
     </div>
-    <div class="text-center"><button class="rgbMixer btn-dark">Show HSL</button></div>
     <script src="js/color-demo.js"></script>
 </div>

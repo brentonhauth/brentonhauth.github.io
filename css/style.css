@@ -25,6 +25,11 @@ div.section-header {
     height: 300px;
 
 }
+h6.color-hex-display {
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
 #heading {
     background-image: linear-gradient(to top,rgba(9, 10, 77, 0.2),rgba(9, 10, 77, 0.2),
     rgba(250, 29, 0, 0.2), rgba(240, 149, 13, 0.2), rgba(58, 159, 226, 0.2));
