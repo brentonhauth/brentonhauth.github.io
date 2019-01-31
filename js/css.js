@@ -28,7 +28,7 @@ $(`.scroll-to[href^="#"]`).on("click", function() {
 
 
 
-if (window.innerWidth <= 800 && window.innerHeight <= 600) return;
+if (isMobile()) return;
 
 var docEl = document.documentElement;
 
