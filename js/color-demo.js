@@ -1,7 +1,7 @@
-(() => {
+;(() => {
 "use strict";
 
-function calcLColor(clr) {
+var calcLColor = clr => {
     let u = 1;
     if (clr instanceof ColorRGB) {
         let rr = clr.r / 255, rg = clr.g / 255, rb = clr.b / 255;
@@ -12,7 +12,7 @@ function calcLColor(clr) {
     return u < 0.47 ? "#fff" : "#000";
 }
 
-function initMixColor(i, rmc, ic, clr) {
+var initMixColor = (i, rmc, ic, clr) => {
     rmc.rgb = clr;
     ic.value = rmc.getColor().hex;
     $(".color-hex-display.hex-mixer").get(i).innerText = rmc.getColor().hex;

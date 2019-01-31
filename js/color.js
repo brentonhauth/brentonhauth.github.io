@@ -1,4 +1,9 @@
-(function() {
+/**
+ * Color mixer v1.0.1
+ * 
+ * @author Brenton Hauth
+ */
+;(function() {
 "use strict";
 
 window.Color = class {

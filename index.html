@@ -4,42 +4,65 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brenton Hauth</title>
     <link href="img/icon.bmp" rel=icon />
-    <title>Brenton Hauth | Home</title>
-
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/cover.css" rel="stylesheet" />
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light text-dark fixed-top">
-        <a class="navbar-brand" >Brenton Hauth</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarList"
-        aria-controls="navbarList" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarList">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a class="nav-link" >About</a></li>
-                <li class="nav-item"><a class="nav-link" >Projects</a></li>
-                <li class="nav-item"><a class="nav-link" >Contact</a></li>
-            </ul>
+<body id="top">
+    <div class="site-wrapper">
+        <div id="banner" class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <nav class="navbar navbar-expand-lg navbar-light text-dark bg-light fixed-top">
+                            <a class="navbar-brand scroll-to" href="#top">Brenton Hauth</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarList"
+                            aria-controls="navbarList" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarList">
+                                <ul class="nav navbar-nav mr-auto">
+                                    <li class="nav-item"><a class="nav-link scroll-to" href="#about">About</a></li>
+                                    <li class="nav-item"><a class="nav-link scroll-to" href="#projects">Projects</a></li>
+                                    <li class="nav-item"><a class="nav-link scroll-to" href="#contact">Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="inner cover text-center">
+                    <!-- <img src="./img/bh.jpg" class="profile-shot float-right" /> -->
+                        <h1 class="cover-heading h1">Brenton Hauth</h1>
+                        <h2 class="lead h2">Student &middot; Programmer &middot; Developer</h2>
+                </div>
+            </div>
+            
+            <!-- <div style="font-size:3em;color:rgba(0,0,0,0.4)"><i class="fas fa-angle-double-down"></i></div> -->
         </div>
-    </nav>
-
-    <!-- Header -->
-    <div id="Banner" class="container-fluid">
-        <span class="b-title-text text-center">
-            <h1 class="h1">Brenton Hauth</h1><hr />
-            <h3 class="h3">Student&nbsp;&middot;&nbsp;Programmer&nbsp;&middot;&nbsp;Developer</h3>
-        </span>
+    </div>
+    
+    <div class="container-fluid dark-section py-5" id="about" style="height:750px">
+        <div class="container">
+            <h2 class="h2 section-title">ABOUT</h2><br/>
+            <p>&emsp; &emsp; Currently in my second year, studying
+            Software Engineering - Interactive Gaming (also known as Game Programming) at
+            Centennial College. My hard work is reflective of my grades, as my overall grade
+            point average just over 4.2. I am interested in the field
+            of Gaming, as well as the field of Web Development.</p>
+        </div>
     </div>
 
-    <!-- Content -->
-    <div class="card" style="top:-5px;">
-        <div class="card-header h1" id="heading"></div>
-        <div class="card-body py-5">
+    <div class="container-fluid py-5" id="projects" style="height:750px">
+        <div class="container">
+            <h2 class="h2 section-title">PROJECTS</h2><br/>
             <div class="container text-center py-5" id="Content">
                 <h1 class="h1">Come back soon!</h1><br/>
                 <p class="h4">Currently my github page is undergoing maintenance.</p><br/><br/>
@@ -48,8 +71,41 @@
             </div>
         </div>
     </div>
-    <!-- <script src="lib/js/jsrc.js"></script>
-    <script src="lib/js/color.js"></script>
-    <script src="js/index.js"></script> -->
+
+    <div id="contact" class="container-fluid dark-section py-5" style="height:750px">
+        <div class="container">
+            <h2 class="h2 section-title">CONTACT</h2><br/>
+            <form action="mailto:brentonh@rogers.com" method="POST" enctype="text/plain" class="contact-form text-center">
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label class="sr-only" for="contactNameField">Name</label>
+                        <input id="contactNameField" type="text" placeholder="Name" class="form-control" required />
+                    </div>
+                    <div class="form-group col">
+                        <label class="sr-only" for="contactEmailField">Email</label>
+                        <input id="contactEmailField" type="email" placeholder="Email" class="form-control" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="contactSubjectField">Subject</label>
+                    <input id="contactSubjectField" type="text" placeholder="Subject" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="contactMessageField">Message</label>
+                    <textarea id="contactMessageField" placeholder="Message" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js"
+    integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script>
+    <script src="./lib/jquery/jquery.easing.min.js"></script>
+    <script src="./js/css.js"></script>
 </body>
 </html>
