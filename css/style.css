@@ -41,3 +41,12 @@ body {
 .contact-form textarea {
     height:200px;
 }
+
+.gh-link {
+    color: rgba(0,0,0,.5) !important;
+    text-decoration: none !important;
+}
+
+.gh-link:hover {
+    color: rgba(0,0,0,.9) !important;
+}
