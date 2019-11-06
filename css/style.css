@@ -6,10 +6,13 @@ body {
 
 
 #banner {
-    background-image: url('../img/banner.jpg');
+    background-image: url('../img/cottage-dock.jpg'); /* url('../img/banner.jpg'); */
     background-size: cover;
+    background-position-y: center;
+    background-position-x: right;
+    background-repeat: no-repeat;
 }
-#banner hr{border-width:1px;border-style:solid;border-color:black;}
+#banner hr{border-width:1px;border-style:solid;border-color:#1e1e1e;}
 
 .profile-shot {
     max-width: 175px;
@@ -49,4 +52,22 @@ body {
 
 .gh-link:hover {
     color: rgba(0,0,0,.9) !important;
+}
+
+.inner.cover {
+    color:
+    rgba(246, 255, 246, 0.8);
+    letter-spacing: .25em;
+    font-family: "Raleway";
+}
+
+.inner.cover h1 {
+    text-transform: uppercase;
+    letter-spacing: .35em;
+}
+
+span {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0,0,0,.25);
 }

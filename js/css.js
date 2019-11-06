@@ -30,28 +30,29 @@ $(`.scroll-to[href^="#"]`).on("click", function() {
 
 if (isMobile()) return;
 
+var scrollAmount = 60;
+
 var docEl = document.documentElement;
 
-var navbarIsWhite = docEl.scrollTop > 80;
+var navbarIsWhite = docEl.scrollTop > scrollAmount;
 
 var navbar = $("nav.navbar");
-// trust
+
 navbar.css({ "display": "none" });
-//setTimeout(() => {
-    navbar.removeClass(
-        navbarIsWhite ? "" : "bg-light"
-    ).css({
-        "display": "flex",
-        "transition": ".3s"
-    })
-//}, 10);
+
+navbar.removeClass(
+    navbarIsWhite ? "" : "bg-light"
+).css({
+    "display": "flex",
+    "transition": ".3s"
+})
 
 
 $(window).on("scroll", () => {
-    if (navbarIsWhite && docEl.scrollTop < 81) {
+    if (navbarIsWhite && docEl.scrollTop < (scrollAmount + 1)) {
         navbarIsWhite = false;
         navbar.removeClass("bg-light");
-    } else if (!navbarIsWhite && docEl.scrollTop > 80) {
+    } else if (!navbarIsWhite && docEl.scrollTop > scrollAmount) {
         navbarIsWhite = true;
         navbar.addClass("bg-light");
     }
@@ -59,5 +60,4 @@ $(window).on("scroll", () => {
 
 
 
-})(jQuery);
-
+})( jQuery );
